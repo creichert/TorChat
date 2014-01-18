@@ -11,3 +11,4 @@ torchat/src/build
 torchat/src/dist
 
 tor.exe
+tor.pid

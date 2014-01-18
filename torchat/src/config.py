@@ -94,7 +94,7 @@ DEAD_CONNECTION_TIMEOUT = 240
 KEEPALIVE_INTERVAL = 120
 MAX_UNANSWERED_PINGS = 4
 
-SCRIPT_DIR = os.path.abspath(os.path.dirname(toUnicode(sys.argv[0])))
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 ICON_DIR = os.path.join(SCRIPT_DIR, "icons")
 log_writer = None
 cached_data_dir = None
@@ -476,10 +476,10 @@ def main():
     
     print "(0) python version %s" % sys.version.replace("\n", "").replace("\r", "")
 
-    if isPortable():
-        print "(0) running in portable mode, all data is kept inside the bin folder."
-        if (len(sys.argv) > 1):
-            print "(0) ignoring requested profile '%s' because profiles do not exist in portable mode" % toUnicode(sys.argv[1])
+    #if isPortable():
+    #    print "(0) running in portable mode, all data is kept inside the bin folder."
+    #    if (len(sys.argv) > 1):
+    #        print "(0) ignoring requested profile '%s' because profiles do not exist in portable mode" % toUnicode(sys.argv[1])
 
     print "(0) script directory is %s" % SCRIPT_DIR
     print "(0) data directory is %s" % getDataDir()
