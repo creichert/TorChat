@@ -28,6 +28,7 @@ SocksPort 11109
 ## and will be forwarded to TorChat at 127.0.0.1:11009
 HiddenServiceDir hidden_service
 HiddenServicePort 11009 127.0.0.1:11009
+HiddenServicePort 64738 127.0.0.1:64738
 
 ## where should tor store it's cache files
 DataDirectory tor_data

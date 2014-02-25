@@ -2108,7 +2108,8 @@ def startPortableTor():
         tb(1)
 
     print "(1) changing working directory back to %s" % old_dir
-    os.chdir(old_dir)
+    #os.chdir(old_dir)
+    os.chdir(old_dir + "/../../../../..")
     print "(1) current working directory is %s" % os.getcwd()
 
 def stopPortableTor():
